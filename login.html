@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .form-control {
+            width: 100%;
+            font-size: 17px;
+            padding: 5px;
+            border-radius: 5px;
+            border: solid 1px gray;
+        }
+        
+        .btn {
+            background-color: green;
+            color: white;
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .div {
+            width: 400px;
+            border: solid 1px red;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: whitesmoke;
+            z-index: 1;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" onclick="showlogin()">Login</button>
+    <div class="div" id="divLogin" style="display: none;">
+        <div style="width:100%; text-align: center;">
+            <img src="user.png" style="height:100px; width:auto;border-radius:50%;" alt="User Icon" />
+        </div>
+        Username
+        <input type="text" id="username" class="form-control" /> Password
+        <input type="password" id="username" class="form-control" />
+        <input type="submit" value="Login" class="btn" />
+        <button class="btn" onclick="hidelogin()" style="background-color: red;">Cancel</button>
+    </div>
+    <script>
+        function hidelogin() {
+            document.getElementById("divLogin").style.display = "none";
+        }
+
+        function showlogin() {
+            document.getElementById("divLogin").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
